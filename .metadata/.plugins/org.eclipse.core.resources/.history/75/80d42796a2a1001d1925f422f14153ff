@@ -1,0 +1,94 @@
+package farhad_1;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.border.EtchedBorder;
+import java.awt.Window.Type;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JLabel;
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import javax.swing.JTable;
+
+public class MainBasic extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtName;
+	private JTextField txtPhone;
+	private JTable table;
+	private JTable table_1;
+	private JTable table_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainBasic frame = new MainBasic();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MainBasic() {
+		setBackground(new Color(0, 64, 128));
+		setForeground(new Color(0, 128, 192));
+		setTitle("Farhad Foysal First Test");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 64, 128));
+		contentPane.setForeground(new Color(0, 128, 192));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Farhad New Member");
+		lblNewLabel.setForeground(new Color(0, 255, 0));
+		lblNewLabel.setBounds(172, 11, 131, 24);
+		contentPane.add(lblNewLabel);
+		
+		txtName = new JTextField();
+		txtName.setText("Name");
+		txtName.setBounds(10, 46, 200, 20);
+		contentPane.add(txtName);
+		txtName.setColumns(10);
+		
+		txtPhone = new JTextField();
+		txtPhone.setText("Phone");
+		txtPhone.setBounds(224, 46, 200, 20);
+		contentPane.add(txtPhone);
+		txtPhone.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Save");
+		btnNewButton.setBounds(100, 227, 248, 23);
+		contentPane.add(btnNewButton);
+		
+		table = new JTable();
+		table.setBounds(109, 131, 79, -18);
+		contentPane.add(table);
+		
+		table_1 = new JTable();
+		table_1.setCellSelectionEnabled(true);
+		table_1.setColumnSelectionAllowed(true);
+		table_1.setBounds(10, 77, 414, 132);
+		contentPane.add(table_1);
+		
+		table_2 = new JTable();
+		table_2.setBounds(68, 77, 88, 60);
+		contentPane.add(table_2);
+	}
+}
