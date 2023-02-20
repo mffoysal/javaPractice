@@ -1,9 +1,0 @@
-package main;
-
-public class MainPass {
-	public static void main(String args[]) {
-		
-		
-		
-	}
-}
